@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            font-family: 'Arial', sans-serif;
+        }
+        .calculator {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ecebeb;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(212, 212, 216, 0.1);
+        }
+        .calculator h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn {
+            width: 48%;
+        }
+        .btn-clear {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript" src="calci.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <h2><b>Calculator</b></h2>
+        <div class="form-group">
+            <label for="num1">Number 1:</label>
+            <input type="number" id="num1" class="form-control" placeholder="Enter first number">
+        </div>
+
+        <div class="form-group">
+            <label for="num2">Number 2:</label>
+            <input type="number" id="num2" class="form-control" placeholder="Enter second number">
+        </div>
+
+        <div class="btn-group" role="group">
+            <button onclick="calculate('add')" class="btn btn-primary">Add</button>
+            <button onclick="calculate('subtract')" class="btn btn-primary">Subtract</button>
+        </div>
+        <br><br>
+        <div class="btn-group" role="group">
+            <button onclick="calculate('multiply')" class="btn btn-primary">Multiply</button>
+            <button onclick="calculate('divide')" class="btn btn-primary">Divide</button>
+        </div>
+        <br><br>
+
+        <div class="form-group">
+            <label for="result">Result:</label>
+            <input type="text" id="result" class="form-control" readonly>
+        </div>
+
+        <button onclick="clearFields()" class="btn btn-warning btn-clear">Clear</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

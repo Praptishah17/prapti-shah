@@ -1,0 +1,275 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #004d40, #00796b);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.college {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.college:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.college h2 {
+    margin-top: 0;
+    color: #004d40;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.college h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.college h2 a:hover {
+    color: #00796b;
+}
+
+.college h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #00796b;
+    left: 0;
+    bottom: -5px;
+    transition: all 0.3s;
+}
+
+.college:hover h2::after {
+    height: 4px;
+}
+
+footer {
+    background: linear-gradient(135deg, #004d40, #00796b);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+    .college {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .college h2 {
+        font-size: 1.2em;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+#index2.html
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f3f4f6, #e2e4e6);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #3a7bd5, #172c36);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.place {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.place img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    object-fit: cover;
+    flex: 1 1 40%;
+}
+
+.place-info {
+    padding: 20px;
+    flex: 1 1 60%;
+}
+
+.place h2 {
+    margin-top: 0;
+    color: #3a6073;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    position: relative;
+}
+
+footer {
+    background: linear-gradient(135deg, #172c36, #3a7bd5);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+    .place {
+        flex-direction: column;
+    }
+    .place img {
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .place h2 {
+        font-size: 1.2em;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+
+#transport 
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e2e4e6, #f3f4f6);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #172c36, #3a7bd5);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, p {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.lead {
+    font-size: 1.25em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    background: linear-gradient(135deg, #3a7bd5, #172c3673);
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

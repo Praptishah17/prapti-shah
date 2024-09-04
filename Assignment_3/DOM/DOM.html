@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Interactive Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #myDiv {
+            color: #333;
+            font-size: 18px;
+            padding: 15px;
+            background-color: #e8f4f8;
+            border-radius: 8px;
+            border: 1px solid #b0d4e3;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        #myDiv.highlight {
+            background-color: #c1e0e9;
+        }
+        #myImage {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        #myImage:hover {
+            transform: scale(1.05);
+        }
+        .button-group {
+            margin: 20px 0;
+        }
+        .button-group button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 16px;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        #changeImageButton {
+            background-color: #007bff;
+        }
+        #changeImageButton:hover {
+            background-color: #0056b3;
+        }
+        #addTextButton {
+            background-color: #28a745;
+        }
+        #addTextButton:hover {
+            background-color: #218838;
+        }
+        #deleteDivButton {
+            background-color: #dc3545;
+        }
+        #deleteDivButton:hover {
+            background-color: #c82333;
+        }
+        #changeColorButton {
+            background-color: #ffc107;
+        }
+        #changeColorButton:hover {
+            background-color: #e0a800;
+        }
+        #myForm {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #myForm label, #myForm input {
+            display: block;
+            margin-bottom: 12px;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #submitButton {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #17a2b8;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        #submitButton:hover {
+            background-color: #138496;
+        }
+        #dynamicBackground {
+            height: 250px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Web Page</h1>
+
+        <div id="myDiv">This is a div element.</div>
+        
+        <img id="myImage" src="https://via.placeholder.com/400x250" alt="Placeholder Image">
+
+        <div class="button-group">
+            <button id="changeImageButton">Change Image Source</button>
+            <button id="addTextButton">Add Text Node</button>
+            <button id="deleteDivButton">Delete Div</button>
+            <button id="changeColorButton">Change Text Color</button>
+        </div>
+
+        <form id="myForm">
+            <label for="textInput">Enter text:</label>
+            <input type="text" id="textInput" placeholder="Type something...">
+            <button type="button" id="submitButton">Submit</button>
+        </form>
+
+        <div id="dynamicBackground">Background will be set here.</div>
+
+        <div class="message" id="messageBox"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // JavaScript to manipulate DOM elements
+
+        // Function to change the image source
+        function changeImageSource() {
+            var image = document.getElementById('myImage');
+            image.src = 'https://via.placeholder.com/500x300';
+        }
+
+        // Function to add a text node
+        function addTextNode() {
+            var div = document.getElementById('myDiv');
+            var textNode = document.createTextNode(' Additional text.');
+            div.appendChild(textNode);
+        }
+
+        // Function to delete a node
+        function deleteNode() {
+            var element = document.getElementById('myDiv');
+            $(element).slideUp(500, function() {
+                $(this).remove();
+            });
+        }
+
+        // Function to change the text color to blue
+        function changeTextColor() {
+            document.getElementById('myDiv').style.color = 'blue';
+        }
+
+        // Event listeners for JavaScript operations
+        document.getElementById('changeImageButton').addEventListener('click', function() {
+            changeImageSource();
+        });
+
+        document.getElementById('addTextButton').addEventListener('click', function() {
+            addTextNode();
+        });
+
+        document.getElementById('deleteDivButton').addEventListener('click', function() {
+            deleteNode();
+        });
+
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            changeTextColor();
+        });
+
+        // jQuery operations
+        $(document).ready(function() {
+            // Change button text using jQuery
+            $('#changeImageButton').text('Updated Image Source');
+
+            // Set background image using jQuery CSS property
+            $('#dynamicBackground').css('background-image', 'url("https://via.placeholder.com/800x250")');
+
+            // Access HTML form data using jQuery
+            $('#submitButton').click(function() {
+                var textInput = $('#textInput').val();
+
+                // Update the div text with the input value
+                $('#myDiv').text(textInput);
+
+                // Optionally display form data in message box
+                let message = 'Form data using jQuery:\n';
+                message += `Text Input: ${textInput}`;
+                
+                $('#messageBox').text(message).fadeIn(500);
+            });
+
+            // Add attribute using jQuery
+            $('#myImage').attr('title', 'This is a placeholder image');
+        });
+    </script>
+</body>
+</html>
